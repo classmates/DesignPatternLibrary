@@ -1,21 +1,277 @@
-<html>
-<head>
-<title>dummy</title>
-</head>
-<body>
-<h1>initial commit and push</h1>
+<!DOCTYPE html>
 
-<div id="mainContent">
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Memory Lane - Prototype</title>
+
+    <!-- <script data-main="js/main" src="js/lib/require/require.js"></script> -->
+
+    <link rel="stylesheet" type="text/css" href="css/frameworks/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/frameworks/bootstrap-responsive.css">
+    <link rel="stylesheet" type="text/css" href="css/global.css">
+    <link rel="stylesheet" type="text/css" href="css/SchoolApp.css">
+
+    <link href="img/favicon.ico" rel="icon" type="image/x-icon"/>
+</head>
+
+<body >
+
+
+<!-- Content Container -->
+
+<!-- /Content Container -->
+<!-- load templates into DOM -->
+
+
+<div id="backbone269" class="backbone-view">
+    <header id="page-header">
+        <h1 id="logo"><a class="ac" href="#">Classmates</a></h1>
+        <nav id="main-nav">
+            <ul class="h-menu">
+                <li>
+                    <h2><a href="#" class="icon-r-expand">Highline High School</a></h2>
+                    <ul>
+                        <li><a href="#">
+                            <p class="location">Seattle, WA</p>
+
+                            <h3>Highline High School</h3>
+
+                            <p class="details">Class of 1988 <span>3 new members</span></p>
+                        </a></li>
+                        <li><a href="#">
+                            <p class="location">Seattle, WA</p>
+
+                            <h3>Highline High School</h3>
+
+                            <p class="details">Class of 1988 <span>3 new members</span></p>
+                        </a></li>
+                        <li><a href="#">
+                            <p class="location">Seattle, WA</p>
+
+                            <h3>Highline High School</h3>
+
+                            <p class="details">Class of 1988 <span>3 new members</span></p>
+                        </a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="h-menu">
+                <li>
+                    <h2><a href="#" class="profile icon-r-expand"><span class="member-name">Ann-margaret</span> <img
+                            src="img/profile.jpg" alt="profile photo"></a></h2>
+
+                    <h3 class="total-count"><a href="#">8</a> <span class="ac">new notifications</span></h3>
+                    <ul>
+                        <li><a href="#">
+                            <h3>Classmates Guestbook</h3>
+
+                            <p class="details">107 signatures <span>5 new</span></p>
+                        </a></li>
+                        <li><a href="#">
+                            <h3>Inbox</h3>
+
+                            <p class="details">12 messages <span>3 new</span></p>
+                        </a></li>
+                        <li><a href="#">
+                            <h3>My Profile</h3>
+
+                            <p class="details">107 views</p>
+                        </a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form id="search-form" class="hid" method="post">
+                <label for="gsearch" class="ac">Search Site</label>
+                <input type="text" class="search-mini" id="gsearch">
+                <a id="tog" class="opn"></a>
+                <ul id="search-options">
+                    <li>
+                        <label for="searchIn_0">Search Highline High School</label>
+                        <input type="radio" name="searchIn" value="radio" id="searchIn_0">
+                    </li>
+                    <li>
+                        <label for="searchIn_1">Search all People and Schools</label>
+                        <input type="radio" name="searchIn" value="radio" id="searchIn_1">
+                    </li>
+                    <li>
+                        <label for="searchIn_2">Search all Yearbooks</label>
+                        <input type="radio" name="searchIn" value="radio" id="searchIn_2">
+                    </li>
+                </ul>
+                <input type="submit" value="Submit" class="search-button ac">
+            </form>
+            <ul class="h-menu">
+                <li>
+                    <h2><a href="#" class="icon-r-expandtools"><span class="ac">Tools</span></a></h2>
+                    <ul id="tools">
+                        <li><a href="#">Connect to Facebook</a></li>
+                        <li><a href="#">Get an All-Access Pass</a></li>
+                        <li><a href="#">Edit Schools</a></li>
+                        <li><a href="#">Account</a></li>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">Not Ann-margaret?</a></li>
+                        <li><a href="#">Sign Out</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- Content Container -->
+    <div class="container">
+
+        <!-- First Row -->
+        <div class="row">
+            <div class="span8">
+                <div class="row">
+                    <div class="span8">
+                        <h2>Bellevue High School</h2>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!-- School Info Column -->
+                    <div class="span4">
+                        <div class="row">
+                            <div id="schoolInfo" class="span4">
+                                <img src="http://lorempixel.com/160/160/city/6/Dummy-Text/" width="160" height="126">
+
+                                <p>Bellevue, WA</p>
+                                <a href="#">Class of 1988</a>
+                                <select>
+                                    <option value="">Select Class</option>
+                                    <option value="1900">1900</option>
+                                    <option value="1901">1901</option>
+                                    <option value="1902">1902</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /School Info Column -->
+
+                    <!-- Last 4 Yearbooks Column -->
+                    <div class="span4">
+                        <div class="row">
+                            <div class="span4">
+                                <div class="row">
+                                    <div class="span4">
+                                        <h5>Yearbooks</h5>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="span4">
+                                        <div id="backbone295" class="backbone-view">
+                                            <div class="yearbookBlock">
+                                                <a href="http://www.classmates.com/yearbooks/Gladstone-High-School/190240?page=1" data-bindattr-18="18"><img src="./docs/samples/1971.jpg" data-bindattr-19="19" width="45" height="60"></a>
+                                                <a class="yearbookYear" href="#">1971</a><br>
+                                                <div class="globalactions">
+                                                    <a class="icon-l-comment" href="#">2</a>
+                                                    <a class="icon-l-like" href="#">5</a><br>
+                                                    <a class="icon-l-people" href="#">In this book</a>
+                                                </div>
+                                            </div>
+
+                                            <div class="yearbookBlock">
+                                                <a href="http://www.classmates.com/yearbooks/Gladstone-High-School/159421?page=1" data-bindattr-20="20"><img src="./docs/samples/1980.jpg" data-bindattr-21="21" width="45" height="60"></a>
+                                                <a class="yearbookYear" href="#">1980</a><br>
+                                                <div class="globalactions">
+                                                    <a class="icon-l-comment" href="#">2</a>
+                                                    <a class="icon-l-like" href="#">5</a><br>
+                                                    <a class="icon-l-people" href="#">In this book</a>
+                                                </div>
+                                            </div>
+
+                                            <div class="yearbookBlock">
+                                                <a href="http://www.classmates.com/yearbooks/Gladstone-High-School/159068?page=1" data-bindattr-22="22"><img src="./docs/samples/1981.jpg" data-bindattr-23="23" width="45" height="60"></a>
+                                                <a class="yearbookYear" href="#">1981</a><br>
+                                                <div class="globalactions">
+                                                    <a class="icon-l-comment" href="#">2</a>
+                                                    <a class="icon-l-like" href="#">5</a><br>
+                                                    <a class="icon-l-people" href="#">In this book</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="span4">
+                                <div id="backbone298" class="backbone-view"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Last 4 Yearbooks Column -->
+                </div>
+            </div>
+
+            <!-- Merchandising Column -->
+            <div class="span4">
+                <div id="adSpace" class="row">
+                    <span><img src="http://lorempixel.com/228/228/" alt="No belly-fat ads here!"></span><br>
+                    <span>AD SPACE</span>
+                </div>
+            </div>
+            <!-- /Merchandising Column -->
+        </div>
+        <!-- /First Row -->
+
+        <!-- Second Row -->
+        <div id="content" class="row">
+            <!-- Sidebar Menu -->
+            <div class="span3">
+                <div id="backbone310" class="backbone-view">
+                    <div class="well sidebar-nav">
+                        <ul class="nav nav-list">
+                            <li><a id="backbone335" class="backbone-view active" href="#/school/memberList">member List</a>
+                            </li>
+                            <li><a id="backbone336" class="backbone-view" href="#/school/reunions">Reunions</a></li>
+                            <li><a id="backbone339" class="backbone-view" href="#/school/activity">Community Activity</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- /Sidebar Menu -->
+
+            <!-- Main Content -->
+            <div class="span5">
+                <div id="mainContent"></div>
+            </div>
+            <!-- /Main Content -->
+
+            <!-- Secondary Content -->
+            <div class="span4">
+                <div>
+
+                    <p class="bold">Don't know what to do? How about you try one of these.</p>
+                    <ul class="marketingList">
+                        <li>
+                            <button class="btn btn-large btn-primary" type="button">Plan a Reunion</button>
+                        </li>
+                        <li>
+                            <button class="btn btn-large btn-info" type="button">Post a Photo</button>
+                        </li>
+                        <li>
+                            <button class="btn btn-large btn-success" type="button">Where are your <br>classmates now?
+                            </button>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+            <!-- /Secondary Content -->
+        </div>
+        <!-- /Second Row -->
+
+    </div>
 
 </div>
 
 
 <hr />
-<div id="mlTemplate">
-    <p>First Name</p>
-    <p>Last Name</p>
-    <p>Years</p>
-</div>
 <script src="js/lib/jquery/jquery.js"></script>
 <script src="js/lib/backbone/lodash.js"></script>
 <script src="js/lib/backbone/backbone.js"></script>
@@ -28,3 +284,4 @@
 <script src="js/app.js"></script>
 </body>
 </html>
+

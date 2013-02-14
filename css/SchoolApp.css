@@ -1,0 +1,110 @@
+#content {
+	margin-top:20px;
+}
+
+.navbar-inverse .navbar-inner {
+	background: #1868BF !important;
+	border: none;
+}
+
+.navbar-inverse .brand {
+	color: #FFF !important;
+}
+
+.right-border {
+	border-right: 1px dotted #CCC;
+}
+
+.left-border {
+	padding-left: 30px;
+	border-left: 1px dotted #CCC;
+}
+
+#schoolInfo img {
+    float: left;
+}
+
+#schoolInfo a, #schoolInfo p {
+    float: left;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+#schoolInfo select {
+    float: left;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    width: 125px;
+}
+
+.yearbookBlock {
+	float: left;
+	height: 50px;
+	min-width: 150px;
+	margin-top:20px;
+}
+
+.yearbookBlock img {
+	float: left;
+	margin-right: 10px;
+}
+
+.yearbookBlock .yearbookYear {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.yearbookBlock [class*="icon"]:before {
+    font-size: 0.7em;
+    color: #d3d3d3;
+    padding-right: 5px;
+}
+
+.globalactions {
+    margin: 5px 0px 0px 55px;
+    width: 70%;
+}
+
+.globalactions a {
+    color: #000000;
+    font-size: 0.8em;
+}
+
+.profileBlock {
+    margin-top:20px;
+}
+
+.profileBlock ul, p {
+    margin-bottom: 10px;
+}
+
+.profileBlock li {
+    margin-bottom:10px;
+}
+
+.borderSeparator {
+    border-bottom: 1px solid #d3d3d3;
+}
+
+.marketingList li {
+    text-align:center;
+    margin-bottom:10px;
+}
+
+button {
+    height: 65px;
+    width: 200px;
+}
+
+#adSpace {
+    border: 1px dotted;
+    height: 250px;
+    text-align:center;
+    margin-left: 0px;
+    margin-bottom: 20px;
+}
+
+#adSpace span {
+    position:relative;
+    top:50%;
+}
