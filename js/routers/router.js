@@ -5,12 +5,13 @@ var app = app || {};
 
 	var Workspace = Backbone.Router.extend({
 		initialize: function () {
+			app.memberListSettings = app.memberListSettings || {};
 			this.route(/^\/?$/, 'App Home', this.home);
-			this.route(/^\/?school\/?$/, 'public', this.errorState);
-			this.route(/^\/?school\/([^0-9]+)/, 'public', this.errorState);
-			this.route(/^\/?school\/(\d+)\/?$/, 'School Home', this.schoolHome);
-			this.route(/^\/?school\/(\d+)\/memberList\/?$/, 'School Member List', this.memberList);
-			this.route(/^\/?school\/(\d+)\/memberList\/(\d{4})\/?$/, 'Class List', this.classList);
+			this.route(/^\/?school\/?$/i, 'public', this.errorState);
+			this.route(/^\/?school\/([^0-9]+)\/?$/i, 'public', this.errorState);
+			this.route(/^\/?school\/([a-zA-Z0-9-_ ]*)\/(\d+)\/?$/i, 'School Home', this.schoolHome);
+			this.route(/^\/?school\/([a-zA-Z0-9-_ ]*)\/(\d+)\/memberlist(\/\w)*\/?$/i, 'School Member List', this.memberList);
+			this.route(/^\/?school\/([a-zA-Z0-9-_ ]*)\/(\d+)\/memberlist\/(\d{4})\/?$/i, 'Class List', this.classList);
 		},
 //		routes: {
 //			'': 'home',
@@ -27,21 +28,28 @@ var app = app || {};
 		errorState: function () {
 			console.warn('whoops');
 		},
-		schoolHome: function (id) {
+		schoolHome: function (schoolName, id) {
+			console.group('school home');
+			console.log(schoolName);
 			console.log(id);
-			console.log('schoolHome');
-			this.navigate('/school/' + id + '/memberList', true);
-		},
-		memberList: function (id) {
-			console.group('memberList');
-			console.log('id: ', id);
 			console.groupEnd();
+			this.navigate('/school/' + schoolName + '/' + id + '/memberList', true);
+		},
+		memberList: function (schoolName, id) {
+			console.group('member list');
+			console.log(schoolName);
+			console.log(id);
+			console.groupEnd();
+			app.memberListSettings.schoolName = schoolName;
+			app.memberListSettings.schoolID = id;
 			var mlv = new app.MemberListView();
 		},
-		classList: function (id, gradYear) {
-			console.log(arguments);
-			console.log('class list:', gradYear);
-			console.log('for school: ', gradYear);
+		classList: function (schoolName, id, gradYear) {
+			console.group('class list');
+			console.log(schoolName);
+			console.log(id);
+			console.log(gradYear);
+			console.groupEnd();
 		}
 	});
 

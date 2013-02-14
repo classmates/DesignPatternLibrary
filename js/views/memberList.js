@@ -30,6 +30,9 @@ var app = app || {};
 	});
 	app.MemberListItemView = Backbone.View.extend({
 		tagName: 'li',
+		events: {
+			"click": "openItem"
+		},
 		initialize: function () {
 			var tData = this.model.toJSON();
 			tData.idx = this.options.idx;
@@ -38,6 +41,9 @@ var app = app || {};
 		render: function () {
 			this.$el.html(_.template('<span><%- firstName %> <%- lastName %></span> | <span><%- years %></span>', this.model.toJSON()));
 			return this;
+		},
+		openItem: function (evt) {
+			console.log('go get the user details and populate a new view or something');
 		}
 	});
 }(jQuery));
