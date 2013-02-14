@@ -33,21 +33,10 @@ var app = app || {};
 			this.navigate('/school/' + id + '/memberList', true);
 		},
 		memberList: function (id) {
-			console.log('school number: ', id);
-			console.log('memberList');
-			console.log(app.memberList);
-			console.log(typeof app.memberList.fetch);
-			app.memberList.fetch({
-				success: function (coll, resp, opts) {
-					console.group('member list fetch results');
-						console.log('collection: ', coll);
-						console.log('response: ', resp);
-						console.log('options: ', opts);
-					console.groupEnd();
-					$('#mainContent').html(new app.MemberListView({model: app.MemberListItem}).el);
-				}
-			});
-
+			console.group('memberList');
+			console.log('id: ', id);
+			console.groupEnd();
+			var mlv = new app.MemberListView();
 		},
 		classList: function (id, gradYear) {
 			console.log(arguments);

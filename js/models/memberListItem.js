@@ -8,6 +8,12 @@ var app = app || {};
 			lastName: '',
 			years: ''
 		},
-		idAttribute: 'personId'
+		idAttribute: 'personId',
+		initialize: function () {
+			var attYears = this.get('startYear') + ' - ' + this.get('endYear');
+			this.set({
+				years: attYears
+			});
+		}
 	});
 }());
