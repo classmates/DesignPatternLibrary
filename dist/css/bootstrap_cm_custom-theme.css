@@ -150,25 +150,25 @@
 }
 
 .btn-info {
-  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#0e8893), to(#09545b));
-  background-image: -webkit-linear-gradient(top, #0e8893, 0%, #09545b, 100%);
-  background-image: -moz-linear-gradient(top, #0e8893 0%, #09545b 100%);
-  background-image: linear-gradient(to bottom, #0e8893 0%, #09545b 100%);
+  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#89c2ca), to(#5facb7));
+  background-image: -webkit-linear-gradient(top, #89c2ca, 0%, #5facb7, 100%);
+  background-image: -moz-linear-gradient(top, #89c2ca 0%, #5facb7 100%);
+  background-image: linear-gradient(to bottom, #89c2ca 0%, #5facb7 100%);
   background-repeat: repeat-x;
-  border-color: #084c52;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0e8893', endColorstr='#ff09545b', GradientType=0);
+  border-color: #58a9b4;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff89c2ca', endColorstr='#ff5facb7', GradientType=0);
 }
 
 .btn-info:hover,
 .btn-info:focus {
-  background-color: #09545b;
+  background-color: #5facb7;
   background-position: 0 -15px;
 }
 
 .btn-info:active,
 .btn-info.active {
-  background-color: #09545b;
-  border-color: #084c52;
+  background-color: #5facb7;
+  border-color: #58a9b4;
 }
 
 .thumbnail,
@@ -333,12 +333,12 @@
 }
 
 .progress-bar-info {
-  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#0e8893), to(#0a5d64));
-  background-image: -webkit-linear-gradient(top, #0e8893, 0%, #0a5d64, 100%);
-  background-image: -moz-linear-gradient(top, #0e8893 0%, #0a5d64 100%);
-  background-image: linear-gradient(to bottom, #0e8893 0%, #0a5d64 100%);
+  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#89c2ca), to(#66b0ba));
+  background-image: -webkit-linear-gradient(top, #89c2ca, 0%, #66b0ba, 100%);
+  background-image: -moz-linear-gradient(top, #89c2ca 0%, #66b0ba 100%);
+  background-image: linear-gradient(to bottom, #89c2ca 0%, #66b0ba 100%);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0e8893', endColorstr='#ff0a5d64', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff89c2ca', endColorstr='#ff66b0ba', GradientType=0);
 }
 
 .progress-bar-warning {
