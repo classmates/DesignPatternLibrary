@@ -63,7 +63,8 @@ module.exports = function(grunt) {
 
     uglify: {
       options: {
-        banner: '<%= banner %>'
+        banner: '<%= banner %>',
+        report: 'min'
       },
       bootstrap: {
         src: ['<%= concat.bootstrap.dest %>'],
@@ -215,6 +216,6 @@ module.exports = function(grunt) {
 
     var customize = fs.readFileSync('customize.html', 'utf-8')
     var files = getFiles('js') + getFiles('less') + getFiles('fonts')
-    fs.writeFileSync('assets/js/raw-files.js', files)
+    fs.writeFileSync('docs-assets/js/raw-files.js', files)
   });
 };
