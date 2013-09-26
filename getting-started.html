@@ -61,7 +61,7 @@ base_url: "../"
     <div class="page-header">
       <h1 id="whats-included">What's included</h1>
     </div>
-    <p class="lead">Within the download you'll find the following directories and files, logically grouping common assets and providing both compiled and minified variations.</p>
+    <p class="lead">Within the download you'll find the following directories and files, logically grouping common resources and providing both compiled and minified variations.</p>
     <p>Once downloaded, unzip the compressed folder to see the structure of (the compiled) Bootstrap. You'll see something like this:</p>
 
 {% highlight bash %}
@@ -109,8 +109,8 @@ bootstrap/
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-      <script src="../../assets/js/html5shiv.js"></script>
-      <script src="../../assets/js/respond.min.js"></script>
+      <script src="../../docs-assets/js/html5shiv.js"></script>
+      <script src="../../docs-assets/js/respond.min.js"></script>
     <![endif]-->
   </head>
   <body>
@@ -414,7 +414,7 @@ bootstrap/
             <td><code>.input-group-addon</code></td>
           </tr>
           <tr>
-            <td><code>.thumbnail</code></td>
+            <td><code>.img-polaroid</code></td>
             <td><code>.img-thumbnail</code></td>
           </tr>
           <tr>
@@ -445,10 +445,33 @@ bootstrap/
             <td><code>.bar-*</code></td>
             <td><code>.progress-bar-*</code></td>
           </tr>
+          <tr>
+            <td><code>.accordion</code></td>
+            <td><code>.panel-group</code></td>
+          </tr>
+          <tr>
+            <td><code>.accordion-group</code></td>
+            <td><code>.panel .panel-default</code></td>
+          </tr>
+          <tr>
+            <td><code>.accordion-heading</code></td>
+            <td><code>.panel-heading</code></td>
+          </tr>
+          <tr>
+            <td><code>.accordion-body</code></td>
+            <td><code>.panel-collapse</code></td>
+          </tr>
+          <tr>
+            <td><code>.accordion-inner</code></td>
+            <td><code>.panel-body</code></td>
+          </tr>
+          <tr>
+            <td><code>.alert-error</code></td>
+            <td><code>.alert-danger</code></td>
+          </tr>
         </tbody>
       </table>
     </div><!-- /.table-responsive -->
-
 
     <h2 id="migration-new">What's new</h2>
     <p>We've added new elements and changed some existing ones. Here are the new or updated styles.</p>
@@ -726,6 +749,7 @@ bootstrap/
 {% highlight html %}
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 {% endhighlight %}
+    <p>This tag is included in all docs pages and examples to ensure the best rendering possible in each supported version of Internet Explorer.</p>
     <p>See <a href="http://stackoverflow.com/questions/6771258/whats-the-difference-if-meta-http-equiv-x-ua-compatible-content-ie-edge">this StackOverflow question</a> for more information.</p>
 
     <h3>Internet Explorer 10 in Windows 8 and Windows Phone 8</h3>
@@ -841,10 +865,10 @@ if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
     <p class="lead">Bootstrap follows common web standards, and with minimal extra effort, can be used to create sites that are accessibile to those using <abbr title="Assistive Technology" class="initialism">AT</abbr>.</p>
 
     <h3>Skip navigation</h3>
-    <p>If your navigation contains many links and comes before the main content in the DOM, add a <code>Skip to content</code> link immediately after your opening <code>&lt;body&gt;</code> tag. <a href="http://a11yproject.com/posts/skip-nav-links/">(read why)</a></p>
+    <p>If your navigation contains many links and comes before the main content in the DOM, add a <code>Skip to main content</code> link immediately after your opening <code>&lt;body&gt;</code> tag. <a href="http://a11yproject.com/posts/skip-nav-links/">(read why)</a></p>
 {% highlight html %}
 <body>
-  <a href="#content" class="sr-only">Skip to content</a>
+  <a href="#content" class="sr-only">Skip to main content</a>
   <div class="container" id="content">
     The main page content.
   </div>
