@@ -14,31 +14,26 @@
     {{ content }}
 
     <footer class="container" role="contentinfo">
-      {% include social-buttons.html %}
-
-      <ul class="bs-masthead-links">
-        <li class="current-version">
-          Currently v{{ site.current_version }}
-        </li>
-        <li>
-          <a href="{{ page.base_url }}2.3.2/">Bootstrap 2.3.2 docs</a>
-        </li>
-        <li>
-          <a href="{{ site.repo }}" onclick="_gaq.push(['_trackEvent', 'Jumbotron actions', 'Jumbotron links', 'GitHub project']);">GitHub project</a>
-        </li>
-        <li>
-          <a href="{{ page.base_url }}getting-started/#examples" onclick="_gaq.push(['_trackEvent', 'Jumbotron actions', 'Jumbotron links', 'Examples']);">Examples</a>
-        </li>
-        <li>
-          <a href="{{ page.base_url }}components/#glyphicons" onclick="_gaq.push(['_trackEvent', 'Jumbotron actions', 'Jumbotron links', 'Glyphicons']);">Glyphicons</a>
-        </li>
-        <li>
-          <a href="{{ site.expo }}" onclick="_gaq.push(['_trackEvent', 'Jumbotron actions', 'Jumbotron links', 'Expo']);">Expo</a>
-        </li>
-        <li>
-          <a href="{{ site.blog }}" onclick="_gaq.push(['_trackEvent', 'Jumbotron actions', 'Jumbotron links', 'Blog']);">Blog</a>
-        </li>
-      </ul>
+        <div class="row bs-masthead-links">
+            <div class="links col-sm-10 col-sm-offset-1">
+                <p class="text-center">
+                    <a href="https://www.facebook.com/Classmatescom" target="_new">Like us on Facebook</a> |
+                    <a href="http://pinterest.com/classmates/" target="_new">Fun stuff on Pinterest</a> |
+                    <a href="https://twitter.com/Classmates" target="_new">Follow us on Twitter</a>
+                </p>
+            </div>
+            <div class="links col-md-10 col-md-offset-1">
+                <p class="text-center">
+                    <a href="http://schoolfeed.classmates.com/">schoolFeed</a> |
+                    <a href="http://www.classmates.com/about">About&nbsp;Us</a> |
+                    <a href="http://www.classmates.com/sitesearch/help">Help</a> |
+                    <a href="http://www.classmates.com/about/terms">Terms&nbsp;of&nbsp;Service</a></span> |
+                    <a href="http://www.classmates.com/about/privacy">Privacy&nbsp;Policy</a> |
+                    <a href="https://plus.google.com/+classmates/posts" target="_new">Google+</a> |
+                    <a href="http://instagram.com/classmates" target="_new">Instagram</a>
+                </p>
+            </div>
+        </div>
     </footer>
 
     <!-- JS and analytics only. -->
