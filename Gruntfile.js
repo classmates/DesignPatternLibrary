@@ -42,24 +42,44 @@ module.exports = function(grunt) {
         banner: '<%= banner %><%= jqueryCheck %>',
         stripBanners: false
       },
-      bootstrap: {
-        src: [
-          'js/transition.js',
-          'js/alert.js',
-          //'js/button.js',
-          //'js/carousel.js',
-          //'js/collapse.js',
-          'js/dropdown.js',
-          'js/modal.js',
-          'js/tooltip.js',
-          'js/popover.js'
-            //,
-          //'js/scrollspy.js',
-          //'js/tab.js',
-          //'js/affix.js'
-        ],
-        dest: 'dist/js/<%= pkg.name %>.js'
-      }
+        // modify the "bootstrap" block for static delivery
+        bootstrap: {
+            src: [
+                'js/transition.js',
+                'js/alert.js',
+                //'js/button.js',
+                //'js/carousel.js',
+                //'js/collapse.js',
+                'js/dropdown.js',
+                'js/modal.js',
+                'js/tooltip.js',
+                'js/popover.js'
+                //,
+                //'js/scrollspy.js',
+                //'js/tab.js',
+                //'js/affix.js'
+            ],
+            dest: 'dist/js/<%= pkg.name %>.js'
+        },
+        // leave the "docs" block alone for documentation
+        docs: {
+            src: [
+                'js/transition.js',
+                'js/alert.js',
+                'js/button.js',
+                'js/carousel.js',
+                'js/collapse.js',
+                'js/dropdown.js',
+                'js/modal.js',
+                'js/tooltip.js',
+                'js/popover.js',
+                'js/scrollspy.js',
+                'js/tab.js',
+                'js/affix.js'
+            ],
+            dest: 'dist/js/docs_<%= pkg.name %>.js'
+        }
+
     },
 
     uglify: {
@@ -82,12 +102,23 @@ module.exports = function(grunt) {
         src: ['less/bootstrap.less'],
         dest: 'dist/css/<%= pkg.name %>.css'
       },
+      docs_bootstrap: {
+        src: ['less/docs_bootstrap.less'],
+        dest: 'dist/css/docs_<%= pkg.name %>.css'
+      },
       min: {
         options: {
           compress: true
         },
         src: ['less/bootstrap.less'],
         dest: 'dist/css/<%= pkg.name %>.min.css'
+      },
+      docs_min: {
+          options: {
+              compress: true
+          },
+          src: ['less/docs_bootstrap.less'],
+          dest: 'dist/css/docs_<%= pkg.name %>.min.css'
       },
       theme: {
         src: ['less/theme.less'],
