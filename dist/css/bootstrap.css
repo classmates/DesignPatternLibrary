@@ -2476,9 +2476,9 @@ input[type="button"].btn-block {
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:hover,
 .dropdown-menu > .active > a:focus {
-  color: #ffffff;
+  color: #42362f;
   text-decoration: none;
-  background-color: #42362f;
+  background-color: #dadac8;
   outline: 0;
 }
 
@@ -3156,15 +3156,15 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .nav-pills > li.active > a,
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus {
-  color: #ffffff;
-  background-color: #42362f;
+  color: #42362f;
+  background-color: #dadac8;
 }
 
 .nav-pills > li.active > a .caret,
 .nav-pills > li.active > a:hover .caret,
 .nav-pills > li.active > a:focus .caret {
-  border-top-color: #ffffff;
-  border-bottom-color: #ffffff;
+  border-top-color: #42362f;
+  border-bottom-color: #42362f;
 }
 
 .nav-stacked > li {
@@ -4308,9 +4308,9 @@ a.list-group-item:focus {
 .list-group-item.active:hover,
 .list-group-item.active:focus {
   z-index: 2;
-  color: #ffffff;
-  background-color: #42362f;
-  border-color: #42362f;
+  color: #42362f;
+  background-color: #f5f5f5;
+  border-color: #cfcfcf;
 }
 
 .list-group-item.active .list-group-item-heading,
@@ -4322,7 +4322,7 @@ a.list-group-item:focus {
 .list-group-item.active .list-group-item-text,
 .list-group-item.active:hover .list-group-item-text,
 .list-group-item.active:focus .list-group-item-text {
-  color: #af9a8e;
+  color: #ffffff;
 }
 
 .list-group-item-heading {
