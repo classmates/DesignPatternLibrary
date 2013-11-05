@@ -9,20 +9,37 @@
 // Grays
 // -------------------------
 
-@gray-darker:            #42362f; //lighten(#000, 13.5%); // #222
-@gray-dark:              #65574e; //lighten(#000, 20%);   // #333
-@gray:                   #8f7e74; //lighten(#000, 33.5%); // #555
-@gray-light:             #dadac8; //lighten(#000, 60%);   // #999
-@gray-lighter:           #f2f2eb; //lighten(#000, 93.5%); // #eee
+@gray-darkest:          #19100b;
+
+@gray-darker:           #42362f; //lighten(#000, 13.5%); // #222
+@gray-dark:             #65574e; //lighten(#000, 20%);   // #333
+@gray:                  #8f7e74; //lighten(#000, 33.5%); // #555
+@gray-light:            #dadac8; //lighten(#000, 60%);   // #999
+@gray-lighter:          #f2f2eb; //lighten(#000, 93.5%); // #eee
 
 // Brand colors
+// Expanded Brand set for Classmates palette
 // -------------------------
 
-@brand-primary:         #ee6600; //#428bca;
-@brand-success:         #9eb541; //#5cb85c;
-@brand-warning:         #f0ad4e;
-@brand-danger:          #c61d23;
-@brand-info:            #89c2ca; //#5bc0de;
+@brand-primary:         #ee6600; // #428bca;
+@brand-primary-link:    #009bd4; // primary link color
+@brand-black:           @gray-darkest;
+
+// Brand Special Use
+// ~~~ ~~~ ~~~
+@brand-transaction-ok:  #9eb541; // used for success alerts, buttons
+@brand-transaction-error: #c61d23; // used for error alerts, buttons
+
+// Brand Secondary
+@brand-inline-alert:    #f7941d; // special text, alert (non-error) message text, buttons
+@brand-inline-info:     #89c2ca; // informational setting.  best as background, too light for text color
+@brand-market-low:      #0e8893;
+@brand-market-high:     #9ae2fd;
+
+@brand-success:         @brand-transaction-ok; //#5cb85c;
+@brand-warning:         @brand-inline-alert;
+@brand-danger:          @brand-transaction-error;
+@brand-info:            @brand-inline-info; //#5bc0de;
 
 // Scaffolding
 // -------------------------
@@ -33,12 +50,14 @@
 // Links
 // -------------------------
 
-@link-color:            #009bd4; //@brand-primary
+@link-color:            @brand-primary-link; //@brand-primary
 @link-hover-color:      darken(@link-color, 15%);
 
 // Typography
 // -------------------------
 
+@brand-font-name:         "brandon";
+@brand-font-path:         "../fonts/";
 @font-family-sans-serif:  arial, helvetica, clean, sans-serif; //"Helvetica Neue", Helvetica, Arial, sans-serif;
 @font-family-serif:       Georgia, "Times New Roman", Times, serif;
 @font-family-monospace:   Monaco, Menlo, Consolas, "Courier New", monospace;
@@ -58,8 +77,8 @@
 @line-height-base:        1.5;  // 1.428571429; // 20/14
 @line-height-computed:    floor(@font-size-base * @line-height-base); // ~20px
 
-@headings-font-family:    @font-family-base;
-@headings-font-weight:    500;
+@headings-font-family:    @brand-font-name, @font-family-base;
+@headings-font-weight:    700;
 @headings-line-height:    @line-height-base; //1.1;
 @headings-color:          inherit;
 

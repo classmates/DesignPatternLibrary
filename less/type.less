@@ -5,13 +5,22 @@
 
 // Body text
 // -------------------------
-
+@font-face {
+    font-family: 'brandon';
+    src: url('@{brand-font-path}@{brand-font-name}.eot');
+    src: url('@{brand-font-path}@{brand-font-name}.eot?#iefix') format('embedded-opentype'),
+    url('@{brand-font-path}@{brand-font-name}.woff') format('woff'),
+    url('@{brand-font-path}@{brand-font-name}.ttf') format('truetype'),
+    url('@{brand-font-path}@{brand-font-name}.svg#brandon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 p {
   margin: 0 0 (@line-height-computed / 2);
 }
 .lead {
   margin-bottom: @line-height-computed;
-  font-size: (@font-size-base * 1.15);
+  font-size: (@font-size-base * 1.05);
   font-weight: 200;
   line-height: 1.4;
 

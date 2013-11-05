@@ -14,6 +14,9 @@
         <li{% if page.slug == "getting-started" %} class="active"{% endif %}>
           <a href="{{ page.base_url }}getting-started">Getting started</a>
         </li>
+        <li{% if page.slug == "style-guide" %} class="active"{% endif %}>
+          <a href="{{ page.base_url}}style-guide">Style Guide</a>
+        </li>
         <li{% if page.slug == "css" %} class="active"{% endif %}>
           <a href="{{ page.base_url }}css">CSS</a>
         </li>
@@ -22,9 +25,6 @@
         </li>
         <li{% if page.slug == "js" %} class="active"{% endif %}>
           <a href="{{ page.base_url }}javascript">JavaScript</a>
-        </li>
-        <li{% if page.slug == "customize" %} class="active"{% endif %}>
-          <a href="{{ page.base_url }}customize">Customize</a>
         </li>
       </ul>
     </nav>

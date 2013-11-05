@@ -117,12 +117,16 @@ body {
  */
 
 .bs-footer {
+  background: #999;
   padding-top: 40px;
   padding-bottom: 30px;
-  margin-top: 100px;
-  color: #777;
+  /*margin-top: 100px;*/
+  color: #19100b;
   text-align: center;
   border-top: 1px solid #e5e5e5;
+}
+.bs-footer a {
+    color: #fff;
 }
 .footer-links {
   margin: 10px 0;
@@ -234,6 +238,9 @@ body {
     background-repeat: no-repeat;
     background-position: center center;
     font-family: 'brandonMed', Trebuchet, Arial, sans-serif;
+}
+.bs-header {
+    background-position: top center;
 }
 
 
@@ -419,25 +426,13 @@ body {
   }
 }
 
-
 /*
- * Callout for 2.3.2 docs
+ * Page Content area
  *
- * Only appears below page headers (not on the homepage). The homepage gets its
- * own link with the masthead links.
- */
-
-.bs-old-docs {
-  padding: 15px 20px;
-  color: #777;
-  background-color: #fafafa;
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #e5e5e5;
+*/
+.bs-docs-container {
+    background: white;
 }
-.bs-old-docs strong {
-  color: #555;
-}
-
 
 /*
  * Side navigation

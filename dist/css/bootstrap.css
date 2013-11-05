@@ -384,13 +384,21 @@ hr {
   border: 0;
 }
 
+@font-face {
+  font-family: 'brandon';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/brandon.eot');
+  src: url('../fonts/brandon.eot?#iefix') format('embedded-opentype'), url('../fonts/brandon.woff') format('woff'), url('../fonts/brandon.ttf') format('truetype'), url('../fonts/brandon.svg#brandon') format('svg');
+}
+
 p {
   margin: 0 0 9.5px;
 }
 
 .lead {
   margin-bottom: 19px;
-  font-size: 14.95px;
+  font-size: 13.65px;
   font-weight: 200;
   line-height: 1.4;
 }
@@ -478,8 +486,8 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: arial, helvetica, clean, sans-serif;
-  font-weight: 500;
+  font-family: "brandon", arial, helvetica, clean, sans-serif;
+  font-weight: 700;
   line-height: 1.5;
   color: inherit;
 }
