@@ -12,7 +12,6 @@ bootstrap/.idea/modules.xml
 bootstrap/.idea/scopes/scope_settings.xml
 bootstrap/.idea/vcs.xml
 bootstrap/.idea/workspace.xml
-dist/js/docs_bootstrap.js
 node_modules/.bin/browserstack-runner
 node_modules/.bin/grunt-jekyll
 node_modules/browserstack-runner/.npmignore
