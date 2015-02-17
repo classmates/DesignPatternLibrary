@@ -1,6 +1,0 @@
-# installed source #
-node_modules
-.idea
-bootstrap/.idea
-filename(with)[chars$]^that.must+be-escaped
-Node_js_Dependencies_for_ui_architecture_bb.xml
