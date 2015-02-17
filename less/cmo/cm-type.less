@@ -1,0 +1,55 @@
+
+// Contextual backgrounds
+// For now we'll leave these alongside the text classes until v4 when we can
+// safely shift things around (per SemVer rules).
+.bg-white {
+    .bg-variant(#fff);
+}
+.bg-mid-gray {
+    color: #fff;
+    .bg-variant(@brand-mid-gray);
+}
+.bg-mid-gray a, .bg-mid-gray a:hover {
+    color: #fff;
+}
+
+// Custom Fonts: Brandon
+@font-face {
+    font-family: '@{font-cmo-name}Med';
+    src: url('@{font-cmo-path}@{font-cmo-name}Med.eot');
+    src: url('@{font-cmo-path}@{font-cmo-name}Med.eot?#iefix') format('embedded-opentype'), url('@{font-cmo-path}@{font-cmo-name}Med.svg#@{font-cmo-name}Med') format('svg'), url('@{font-cmo-path}@{font-cmo-name}Med.woff') format('woff'), url('@{font-cmo-path}@{font-cmo-name}Med.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: '@{font-cmo-name}';
+    src: url('@{font-cmo-path}@{font-cmo-name}.eot');
+    src: url('@{font-cmo-path}@{font-cmo-name}.eot?#iefix') format('embedded-opentype'), url('@{font-cmo-path}@{font-cmo-name}.svg#@{font-cmo-name}') format('svg'), url('@{font-cmo-path}@{font-cmo-name}.woff') format('woff'), url('@{font-cmo-path}@{font-cmo-name}.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: '@{font-cmo-name}Black';
+    src: url('@{font-cmo-path}@{font-cmo-name}Black.eot');
+    src: url('@{font-cmo-path}@{font-cmo-name}Black.eot?#iefix') format('embedded-opentype'), url('@{font-cmo-path}@{font-cmo-name}Black.svg#@{font-cmo-name}Black') format('svg'), url('@{font-cmo-path}@{font-cmo-name}Black.woff') format('woff'), url('@{font-cmo-path}@{font-cmo-name}Black.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: '@{font-cmo-name}Light';
+    src: url('@{font-cmo-path}@{font-cmo-name}Light.eot');
+    src: url('@{font-cmo-path}@{font-cmo-name}Light.eot?#iefix') format('embedded-opentype'), url('@{font-cmo-path}@{font-cmo-name}Light.svg#@{font-cmo-name}Light') format('svg'), url('@{font-cmo-path}@{font-cmo-name}Light.woff') format('woff'), url('@{font-cmo-path}@{font-cmo-name}Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'cm-icons';
+    src: url('@{font-cmo-path}cm-icons.eot');
+    src: url('@{font-cmo-path}cm-icons.eot?#iefix') format('embedded-opentype'), url('@{font-cmo-path}cm-icons.woff') format('woff'), url('@{font-cmo-path}cm-icons.ttf') format('truetype'), url('@{font-cmo-path}cm-icons.svg#cm-icons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
