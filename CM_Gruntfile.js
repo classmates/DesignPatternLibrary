@@ -37,7 +37,7 @@ module.exports = function (grunt) {
 
     // Task configuration.
     clean: {
-      dist: ['dist', 'docs/dist']
+      dist: ['dist', 'cm_docs/dist']
     },
 
     jshint: {
@@ -60,7 +60,7 @@ module.exports = function (grunt) {
         src: 'js/tests/unit/*.js'
       },
       assets: {
-        src: ['docs/assets/js/_src/*.js', 'docs/assets/js/*.js', '!docs/assets/js/*.min.js']
+        src: ['cm_docs/assets/js/_src/*.js', 'cm_docs/assets/js/*.js', '!cm_docs/assets/js/*.min.js']
       }
     },
 
@@ -119,23 +119,23 @@ module.exports = function (grunt) {
       },
       customize: {
         src: [
-          'docs/assets/js/_vendor/less.min.js',
-          'docs/assets/js/_vendor/jszip.min.js',
-          'docs/assets/js/_vendor/uglify.min.js',
-          'docs/assets/js/_vendor/blob.js',
-          'docs/assets/js/_vendor/filesaver.js',
-          'docs/assets/js/raw-files.min.js',
-          'docs/assets/js/_src/customizer.js'
+          'cm_docs/assets/js/_vendor/less.min.js',
+          'cm_docs/assets/js/_vendor/jszip.min.js',
+          'cm_docs/assets/js/_vendor/uglify.min.js',
+          'cm_docs/assets/js/_vendor/blob.js',
+          'cm_docs/assets/js/_vendor/filesaver.js',
+          'cm_docs/assets/js/raw-files.min.js',
+          'cm_docs/assets/js/_src/customizer.js'
         ],
-        dest: 'docs/assets/js/customize.min.js'
+        dest: 'cm_docs/assets/js/customize.min.js'
       },
-      docsJs: {
+      cm_docsJs: {
         src: [
-          'docs/assets/js/_vendor/holder.js',
-          'docs/assets/js/_vendor/ZeroClipboard.min.js',
-          'docs/assets/js/_src/application.js'
+          'cm_docs/assets/js/_vendor/holder.js',
+          'cm_docs/assets/js/_vendor/ZeroClipboard.min.js',
+          'cm_docs/assets/js/_src/application.js'
         ],
-        dest: 'docs/assets/js/docs.min.js'
+        dest: 'cm_docs/assets/js/cm_docs.min.js'
       }
     },
 
@@ -223,13 +223,13 @@ module.exports = function (grunt) {
         src: 'dist/css/<%= pkg.name %>-theme.css'
       },
       docs: {
-        src: 'docs/assets/css/_src/docs.css'
+        src: 'cm_docs/assets/css/_src/cm_docs.css'
       },
       examples: {
         expand: true,
-        cwd: 'docs/examples/',
+        cwd: 'cm_docs/examples/',
         src: ['**/*.css'],
-        dest: 'docs/examples/'
+        dest: 'cm_docs/examples/'
       }
     },
 
@@ -242,14 +242,14 @@ module.exports = function (grunt) {
         'dist/css/bootstrap-theme.css'
       ],
       examples: [
-        'docs/examples/**/*.css'
+        'cm_docs/examples/**/*.css'
       ],
       docs: {
         options: {
           ids: false,
           'overqualified-elements': false
         },
-        src: 'docs/assets/css/_src/docs.css'
+        src: 'cm_docs/assets/css/_src/cm_docs.css'
       }
     },
 
@@ -266,10 +266,10 @@ module.exports = function (grunt) {
       },
       docs: {
         src: [
-          'docs/assets/css/_src/docs.css',
-          'docs/assets/css/_src/pygments-manni.css'
+          'cm_docs/assets/css/_src/cm_docs.css',
+          'cm_docs/assets/css/_src/pygments-manni.css'
         ],
-        dest: 'docs/assets/css/docs.min.css'
+        dest: 'cm_docs/assets/css/cm_docs.min.css'
       }
     },
 
@@ -295,13 +295,13 @@ module.exports = function (grunt) {
       },
       examples: {
         expand: true,
-        cwd: 'docs/examples/',
+        cwd: 'cm_docs/examples/',
         src: '**/*.css',
-        dest: 'docs/examples/'
+        dest: 'cm_docs/examples/'
       },
       docs: {
         files: {
-          'docs/assets/css/_src/docs.css': 'docs/assets/css/_src/docs.css'
+          'cm_docs/assets/css/_src/cm_docs.css': 'cm_docs/assets/css/_src/cm_docs.css'
         }
       }
     },
@@ -320,7 +320,7 @@ module.exports = function (grunt) {
           'css/*.map',
           'fonts/*'
         ],
-        dest: 'docs/dist'
+        dest: 'cm_docs/dist'
       }
     },
 
@@ -342,15 +342,15 @@ module.exports = function (grunt) {
         options: {
           pretty: true,
           data: function () {
-            var filePath = path.join(__dirname, 'less/variables.less');
+            var filePath = path.join(__dirname, 'less/cmo/cm_variables.less');
             var fileContent = fs.readFileSync(filePath, { encoding: 'utf8' });
             var parser = new BsLessdocParser(fileContent);
             return { sections: parser.parseFile() };
           }
         },
         files: {
-          'docs/_includes/customizer-variables.html': 'docs/_jade/customizer-variables.jade',
-          'docs/_includes/nav/customize.html': 'docs/_jade/customizer-nav.jade'
+          'cm_docs/_includes/customizer-variables.html': 'cm_docs/_jade/customizer-variables.jade',
+          'cm_docs/_includes/nav/customize.html': 'cm_docs/_jade/customizer-nav.jade'
         }
       }
     },
@@ -420,7 +420,7 @@ module.exports = function (grunt) {
   require('load-grunt-tasks')(grunt, { scope: 'devDependencies' });
   require('time-grunt')(grunt);
 
-  // Docs HTML validation task
+  // cm_docs HTML validation task
   grunt.registerTask('validate-html', ['jekyll', 'validation']);
 
   var runSubset = function (subset) {
@@ -460,11 +460,11 @@ module.exports = function (grunt) {
   grunt.registerTask('less-compile', ['less:compileCore', 'less:compileCM', 'less:compileTheme', 'less:compileCMTheme']);
   grunt.registerTask('dist-css', ['less-compile', 'autoprefixer', 'usebanner', 'csscomb', 'cssmin']);
 
-  // Docs distribution task.
-  grunt.registerTask('dist-docs', 'copy:docs');
+  // cm_docs distribution task.
+  grunt.registerTask('dist-cm_docs', 'copy:cm_docs');
 
   // Full distribution task.
-  grunt.registerTask('dist', ['clean', 'dist-css', 'copy:fonts', 'dist-js', 'dist-docs']);
+  grunt.registerTask('dist', ['clean', 'dist-css', 'copy:fonts', 'dist-js', 'dist-cm_docs']);
 
   // Default task.
   grunt.registerTask('default', ['test', 'dist', 'build-glyphicons-data', 'build-customizer']);
