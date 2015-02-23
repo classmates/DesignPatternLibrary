@@ -1,0 +1,44 @@
+# This file is generated via Grunt task. **Do not edit directly.**
+# See the 'build-glyphicons-data' task in Gruntfile.js.
+
+- glyphicon-twitter
+- glyphicon-facebook
+- glyphicon-pinterest
+- glyphicon-google-plus
+- glyphicon-twitter-square
+- glyphicon-facebook-square
+- glyphicon-pinterest-square
+- glyphicon-google-plus-square
+- glyphicon-logo-full
+- glyphicon-logo-monogram
+- glyphicon-school-home
+- glyphicon-event
+- glyphicon-cake-slice
+- glyphicon-image-thin
+- glyphicon-heart-thin
+- glyphicon-zoom-in-thin
+- glyphicon-zoom-out-thin
+- glyphicon-reply-thin
+- glyphicon-circle-plus-thin
+- glyphicon-circle-minus-thin
+- glyphicon-circle-check-thin
+- glyphicon-circle-cross-thin
+- glyphicon-square-plus-thin
+- glyphicon-square-minus-thin
+- glyphicon-square-check-thin
+- glyphicon-square-cross-thin
+- glyphicon-repeat-thin
+- glyphicon-share-thin
+- glyphicon-arrow-left-thin
+- glyphicon-arrow-right-thin
+- glyphicon-arrow-up-thin
+- glyphicon-arrow-down-thin
+- glyphicon-check-thin
+- glyphicon-cross-thin
+- glyphicon-ellipsis-thin
+- glyphicon-chevron-right-thin
+- glyphicon-chevron-down-thin
+- glyphicon-chevron-up-thin
+- glyphicon-chevron-left-thin
+- glyphicon-cog-thin
+- glyphicon-celebhigh-logo
