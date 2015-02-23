@@ -319,8 +319,8 @@ window.onload = function () { // wait for load in a dumb way because B-0
     js = jqueryCheck + js
 
     return {
-      'bootstrap.js': preamble + js,
-      'bootstrap.min.js': preamble + uglify(js)
+      'cm-bootstrap.js': preamble + js,
+      'cm-bootstrap.min.js': preamble + uglify(js)
     }
   }
 

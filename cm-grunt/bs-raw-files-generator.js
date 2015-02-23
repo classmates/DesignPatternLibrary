@@ -19,13 +19,10 @@ function getFiles(type) {
   var globExpr = (recursive ? '/**/*' : '/*');
   glob.sync(type + globExpr)
     .filter(function (path) {
-      top_grunt.log.writeln('filter: ' + path);
-      top_grunt.log.writeln('type: ' + type);
       return type === 'fonts' ? true : new RegExp('\\.' + type + '$').test(path);
     })
     .forEach(function (fullPath) {
       var relativePath = fullPath.replace(/^[^/]+\//, '');
-      top_grunt.log.writeln('relativePath: ' + relativePath);
       files[relativePath] = (type === 'fonts' ? btoa(fs.readFileSync(fullPath)) : fs.readFileSync(fullPath, 'utf8'));
     });
   return 'var __' + type + ' = ' + JSON.stringify(files) + '\n';
