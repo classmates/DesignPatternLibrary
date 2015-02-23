@@ -105,7 +105,7 @@ module.exports = function (grunt) {
           'js/tab.js',
           'js/affix.js'
         ],
-        dest: 'dist/js/<%= pkg.name %>.js'
+        dest: 'dist/js/cm-<%= pkg.name %>.js'
       }
     },
 
@@ -115,7 +115,7 @@ module.exports = function (grunt) {
       },
       bootstrap: {
         src: '<%= concat.bootstrap.dest %>',
-        dest: 'dist/js/<%= pkg.name %>.min.js'
+        dest: 'dist/js/cm-<%= pkg.name %>.min.js'
       },
       customize: {
         src: [
@@ -152,49 +152,25 @@ module.exports = function (grunt) {
           strictMath: true,
           sourceMap: true,
           outputSourceFiles: true,
-          sourceMapURL: '<%= pkg.name %>.css.map',
-          sourceMapFilename: 'dist/css/<%= pkg.name %>.css.map'
+          sourceMapURL: 'cm-<%= pkg.name %>.css.map',
+          sourceMapFilename: 'dist/css/cm-<%= pkg.name %>.css.map'
         },
         files: {
-          'dist/css/<%= pkg.name %>.css': 'less/bootstrap.less'
+          'dist/css/cm-<%= pkg.name %>.css': 'less/cmo/cm-bootstrap.less'
         }
       },
-      compileCM: {
-            options: {
-                strictMath: true,
-                sourceMap: true,
-                outputSourceFiles: true,
-                sourceMapURL: 'cm-<%= pkg.name %>.css.map',
-                sourceMapFilename: ''
-            },
-            files: {
-                'dist/css/cm-<%= pkg.name %>.css': 'less/cmo/cm-bootstrap.less'
-            }
-        },
       compileTheme: {
         options: {
           strictMath: true,
           sourceMap: true,
           outputSourceFiles: true,
-          sourceMapURL: '<%= pkg.name %>-theme.css.map',
-          sourceMapFilename: 'dist/css/<%= pkg.name %>-theme.css.map'
+          sourceMapURL: 'cm-<%= pkg.name %>-theme.css.map',
+          sourceMapFilename: 'dist/css/cm-<%= pkg.name %>-theme.css.map'
         },
         files: {
-          'dist/css/<%= pkg.name %>-theme.css': 'less/theme.less'
+          'dist/css/cm-<%= pkg.name %>-theme.css': 'less/theme.less'
         }
-      },
-        compileCMTheme: {
-            options: {
-                strictMath: true,
-                sourceMap: true,
-                outputSourceFiles: true,
-                sourceMapURL: 'cm-<%= pkg.name %>-theme.css.map',
-                sourceMapFilename: ''
-            },
-            files: {
-                'dist/css/cm-<%= pkg.name %>-theme.css': 'less/cmo/cm-theme.less'
-            }
-        }
+      }
     },
 
     autoprefixer: {
@@ -214,16 +190,16 @@ module.exports = function (grunt) {
         options: {
           map: true
         },
-        src: 'dist/css/<%= pkg.name %>.css'
+        src: 'dist/css/cm-<%= pkg.name %>.css'
       },
       theme: {
         options: {
           map: true
         },
-        src: 'dist/css/<%= pkg.name %>-theme.css'
+        src: 'dist/css/cm-<%= pkg.name %>-theme.css'
       },
       docs: {
-        src: 'cm_docs/assets/css/_src/cm_docs.css'
+        src: 'cm_docs/assets/css/_src/docs.css'
       },
       examples: {
         expand: true,
@@ -260,8 +236,8 @@ module.exports = function (grunt) {
       },
       core: {
         files: {
-          'dist/css/<%= pkg.name %>.min.css': 'dist/css/<%= pkg.name %>.css',
-          'dist/css/<%= pkg.name %>-theme.min.css': 'dist/css/<%= pkg.name %>-theme.css'
+          'dist/css/cm-<%= pkg.name %>.min.css': 'dist/css/cm-<%= pkg.name %>.css',
+          'dist/css/cm-<%= pkg.name %>-theme.min.css': 'dist/css/cm-<%= pkg.name %>-theme.css'
         }
       },
       docs: {
@@ -309,7 +285,7 @@ module.exports = function (grunt) {
     copy: {
       fonts: {
         expand: true,
-        src: 'fonts/**',
+        src: 'fonts/*',
         dest: 'dist/'
       },
       docs: {
@@ -320,7 +296,7 @@ module.exports = function (grunt) {
           'css/*.map',
           'fonts/*'
         ],
-        dest: 'cm_docs/dist'
+        dest: 'cm-docs/dist'
       }
     },
 
@@ -342,7 +318,7 @@ module.exports = function (grunt) {
         options: {
           pretty: true,
           data: function () {
-            var filePath = path.join(__dirname, 'less/cmo/cm_variables.less');
+            var filePath = path.join(__dirname, 'less/cmo/cm-variables.less');
             var fileContent = fs.readFileSync(filePath, { encoding: 'utf8' });
             var parser = new BsLessdocParser(fileContent);
             return { sections: parser.parseFile() };
@@ -457,14 +433,14 @@ module.exports = function (grunt) {
   grunt.registerTask('dist-js', ['concat', 'uglify']);
 
   // CSS distribution task.
-  grunt.registerTask('less-compile', ['less:compileCore', 'less:compileCM', 'less:compileTheme', 'less:compileCMTheme']);
+  grunt.registerTask('less-compile', ['less:compileCore', 'less:compileTheme']);
   grunt.registerTask('dist-css', ['less-compile', 'autoprefixer', 'usebanner', 'csscomb', 'cssmin']);
 
   // cm_docs distribution task.
-  grunt.registerTask('dist-cm_docs', 'copy:cm_docs');
+  grunt.registerTask('dist-cm-docs', 'copy:docs');
 
   // Full distribution task.
-  grunt.registerTask('dist', ['clean', 'dist-css', 'copy:fonts', 'dist-js', 'dist-cm_docs']);
+  grunt.registerTask('dist', ['clean', 'dist-css', 'copy:fonts', 'dist-js', 'dist-cm-docs']);
 
   // Default task.
   grunt.registerTask('default', ['test', 'dist', 'build-glyphicons-data', 'build-customizer']);
