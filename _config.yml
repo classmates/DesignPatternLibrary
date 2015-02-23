@@ -6,7 +6,7 @@ highlighter:      pygments
 permalink:        pretty
 
 # Server
-source:           cm_docs
+source:           cm-docs
 destination:      _gh_pages
 host:             0.0.0.0
 port:             80
