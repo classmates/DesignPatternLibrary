@@ -150,7 +150,7 @@ module.exports = function (grunt) {
       compileCore: {
         options: {
           strictMath: true,
-          sourceMap: true,
+          sourceMap: false,
           outputSourceFiles: true,
           sourceMapURL: 'cm-<%= pkg.name %>.css.map',
           sourceMapFilename: 'dist/css/cm-<%= pkg.name %>.css.map'
