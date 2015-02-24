@@ -86,8 +86,8 @@ task bowerInstall(dependsOn: ['npmInstall'], type: Exec) {
 
 task bootstrapBuild(dependsOn: ['bowerInstall'], type: Exec) {
     workingDir = "${buildDir}/tmp"
-    commandLine "node_modules/ember-cli/bin/ember", "build", "--environment=production"
-    outputs.dir "/dist"
+    commandLine "./node_modules/grunt-cli/bin/grunt", "default", "--gruntfile=CM_Gruntfile.js"
+    outputs.dir "/_gh_pages"
 }
 
 task createWorkingDirectories {
