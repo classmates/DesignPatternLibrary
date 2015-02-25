@@ -55,7 +55,7 @@ task copyBambooProps(dependsOn: ['createWorkingDirectories'], type: Copy) {
 }
 
 task copyBuild(dependsOn: ['bootstrapBuild'], type: Copy) {
-    from("${buildDir}/tmp/dist") {
+    from("${buildDir}/tmp/_gh_pages") {
         include '**'
     }
     into("${buildDir}/${tarballName}")
@@ -86,6 +86,7 @@ task bowerInstall(dependsOn: ['npmInstall'], type: Exec) {
 
 task bootstrapBuild(dependsOn: ['bowerInstall'], type: Exec) {
     workingDir = "${buildDir}/tmp"
+    println 'bootstrapBuild Directory'
     commandLine "./node_modules/grunt-cli/bin/grunt", "default", "--gruntfile=CM_Gruntfile.js"
     outputs.dir "/_gh_pages"
 }
