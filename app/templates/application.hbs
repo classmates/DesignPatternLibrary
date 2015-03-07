@@ -1,3 +1,59 @@
-<h2 id="title">Welcome to Ember.js</h2>
+
+<a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+<!-- Docs master nav -->
+<header class="navbar navbar-static-top navbar-default" id="top" role="banner">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+          {{#link-to "index" class="navbar-brand"}}Bootstrap{{/link-to}}
+        </div>
+        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+            <ul class="nav navbar-nav">
+                <li>
+                    {{#link-to "getting-started"}}Getting started{{/link-to}}
+                </li>
+                <li>
+                    {{#link-to "css"}}CSS{{/link-to}}
+                </li>
+                <li>
+                    {{#link-to "dpl-components"}}Components{{/link-to}}
+                </li>
+                <li>
+                    {{#link-to "javascript"}}JavaScript{{/link-to}}
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="http://expo.getbootstrap.com" target="_blank">Expo</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
 {{outlet}}
+
+<!-- Footer
+================================================== -->
+<footer class="bs-docs-footer" role="contentinfo">
+    <div class="container">
+
+        <p>Code licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank">MIT</a>,
+            documentation under <a href="http://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>.</p>
+        <ul class="bs-docs-footer-links muted">
+            <li>Currently v3.1.1</li>
+            <li>&middot;</li>
+            <li>{{#link-to "getting-started"}}Examples{{/link-to}}</li>
+            <li>&middot;</li>
+            <li>{{#link-to "about"}}About{{/link-to}}</li>
+            <li>&middot;</li>
+        </ul>
+    </div>
+</footer>
+

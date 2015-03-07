@@ -2,8 +2,25 @@
 
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
-var app = new EmberApp();
+var app = new EmberApp({
+  fingerprint: {
+    enabled: false
+  },
+  lessOptions: {
+    sourceMap: true,
+    paths: [
+      'bower_components/bootstrap/less'
+    ]
+  }
+});
 
+app.import('bower_components/bootstrap/dist/js/cm-bootstrap.min.js');
+app.import('bower_components/bootstrap/dist/css/cm-bootstrap.css');
+app.import('bower_components/bootstrap/dist/css/cm-bootstrap-theme.css');
+app.import('bower_components/bootstrap/dist/css/cm-bootstrap-theme.css.map', {
+  destDir: 'assets'
+});
+app.import('bower_components/bootstrap/less/cmo/cm-variables.less');
 // Use `app.import` to add additional libraries to the generated
 // output files.
 //
@@ -17,4 +34,13 @@ var app = new EmberApp();
 // please specify an object with the list of modules as keys
 // along with the exports of each module as its value.
 
-module.exports = app.toTree();
+//module.exports = app.toTree();
+// incorporate cm-Bootstrap fonts, and put them in the CSS reference location
+var pickFiles = require('broccoli-static-compiler'),
+  mergeTrees = require('broccoli-merge-trees'),
+  bootstrapFonts = pickFiles('bower_components/bootstrap/dist/fonts/', {
+    srcDir: '/',
+    destDir: '/fonts'
+  });
+
+module.exports = mergeTrees([app.toTree(), bootstrapFonts]);
