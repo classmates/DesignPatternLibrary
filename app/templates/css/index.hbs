@@ -2836,11 +2836,13 @@
                         <div class="color-swatch gray-lighter"></div>
                     </div>
                 </div>
-                <div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@gray-darker</span><span class="nd">:</span>  <span class="nt">lighten</span><span class="o">(</span><span class="nn">#000</span><span class="o">,</span> <span class="nt">13</span><span class="nc">.5</span><span class="err">%</span><span class="o">);</span> <span class="o">//</span> <span class="nn">#222</span>
-                    <span class="o">@</span><span class="nt">gray-dark</span><span class="nd">:</span>    <span class="nt">lighten</span><span class="o">(</span><span class="nn">#000</span><span class="o">,</span> <span class="nt">20</span><span class="err">%</span><span class="o">);</span>   <span class="o">//</span> <span class="nn">#333</span>
-                    <span class="o">@</span><span class="nt">gray</span><span class="nd">:</span>         <span class="nt">lighten</span><span class="o">(</span><span class="nn">#000</span><span class="o">,</span> <span class="nt">33</span><span class="nc">.5</span><span class="err">%</span><span class="o">);</span> <span class="o">//</span> <span class="nn">#555</span>
-                    <span class="o">@</span><span class="nt">gray-light</span><span class="nd">:</span>   <span class="nt">lighten</span><span class="o">(</span><span class="nn">#000</span><span class="o">,</span> <span class="nt">46</span><span class="nc">.7</span><span class="err">%</span><span class="o">);</span> <span class="o">//</span> <span class="nn">#777</span>
-                    <span class="o">@</span><span class="nt">gray-lighter</span><span class="nd">:</span> <span class="nt">lighten</span><span class="o">(</span><span class="nn">#000</span><span class="o">,</span> <span class="nt">93</span><span class="nc">.5</span><span class="err">%</span><span class="o">);</span> <span class="o">//</span> <span class="nn">#eee</span></code></pre></div>
+                <div class="highlight"><pre><code class="language-scss" data-lang="scss">
+<span class="k">@gray-darker</span><span class="nd">:</span>  <span class="nn">#333</span>
+<span class="o">@</span><span class="nt">gray-dark</span><span class="nd">:</span> <span class="nn">#322924</span>
+<span class="o">@</span><span class="nt">gray</span><span class="nd">:</span> <span class="nn">#42362f</span>
+<span class="o">@</span><span class="nt">gray-light</span><span class="nd">:</span> <span class="nn">#a39d96</span>
+<span class="o">@</span><span class="nt">gray-lighter</span><span class="nd">:</span> <span class="nn">#e6e6e6</span></code></pre>
+                </div>
 
                 <div class="bs-example">
                     <div class="color-swatches">
@@ -2850,12 +2852,25 @@
                         <div class="color-swatch brand-warning"></div>
                         <div class="color-swatch brand-danger"></div>
                     </div>
+                    <div class="color-swatches buffer-top">
+                        <div class="color-swatch brand-inline-alert"></div>
+                        <div class="color-swatch brand-inline-info"></div>
+                        <div class="color-swatch brand-market-low"></div>
+                        <div class="color-swatch brand-market-high"></div>
+                        <div class="color-swatch brand-mid-gray"></div>
+                    </div>
                 </div>
                 <div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@brand-primary</span><span class="nd">:</span> <span class="nn">#428bca</span><span class="o">;</span>
                     <span class="o">@</span><span class="nt">brand-success</span><span class="nd">:</span> <span class="nn">#5cb85c</span><span class="o">;</span>
                     <span class="o">@</span><span class="nt">brand-info</span><span class="nd">:</span>    <span class="nn">#5bc0de</span><span class="o">;</span>
                     <span class="o">@</span><span class="nt">brand-warning</span><span class="nd">:</span> <span class="nn">#f0ad4e</span><span class="o">;</span>
-                    <span class="o">@</span><span class="nt">brand-danger</span><span class="nd">:</span>  <span class="nn">#d9534f</span><span class="o">;</span></code></pre></div>
+                    <span class="o">@</span><span class="nt">brand-danger</span><span class="nd">:</span>  <span class="nn">#d9534f</span><span class="o">;</span>
+                    <span class="o">@</span><span class="nt">brand-inline-alert</span><span class="nd">:</span>  <span class="nn">#d9534f</span><span class="o">;</span>// (not in use)
+                    <span class="o">@</span><span class="nt">brand-inline-info</span><span class="nd">:</span>  <span class="nn">#d9534f</span><span class="o">;</span>// (not in use)
+                    <span class="o">@</span><span class="nt">brand-market-low</span><span class="nd">:</span>  <span class="nn">#d9534f</span><span class="o">;</span>// (not in use)
+                    <span class="o">@</span><span class="nt">brand-market-high</span><span class="nd">:</span>  <span class="nn">#d9534f</span><span class="o">;</span>// (not in use)
+                    <span class="o">@</span><span class="nt">brand-mid-gray</span><span class="nd">:</span> <span class="nn">#999</span>;</code></pre>
+                </div>
 
                 <p>Use any of these color variables as they are or reassign them to more meaningful variables for your project.</p>
                 <div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Use as-is</span>

@@ -41,6 +41,11 @@ var pickFiles = require('broccoli-static-compiler'),
   bootstrapFonts = pickFiles('bower_components/bootstrap/dist/fonts/', {
     srcDir: '/',
     destDir: '/fonts'
+  }),
+  cmTheme = pickFiles('bower_components/bootstrap/dist/css/', {
+    files: ['cm-bootstrap-theme.min.css'],
+    srcDir: '/',
+    destDir: '/assets'
   });
 
-module.exports = mergeTrees([app.toTree(), bootstrapFonts]);
+module.exports = mergeTrees([app.toTree(), bootstrapFonts, cmTheme]);

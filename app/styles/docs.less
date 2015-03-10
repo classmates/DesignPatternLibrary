@@ -737,27 +737,53 @@ h1[id] {
   }
 }
 
+/*@gray-darker:            #333; //lighten(#000, 13.5%); // #222
+@gray-dark:              #322924; //lighten(#000, 20%);   // #333
+@gray:                   #42362f; //lighten(#000, 33.5%); // #555
+@gray-light:             #a39d96; //lighten(#000, 60%);   // #999
+@gray-lighter:           #e6e6e6; //lighten(#000, 93.5%); // #eee
+
+@brand-primary:         #ee6700;
+@brand-secondary:       #09f;
+@brand-success:         #9eb541;
+@brand-info:            #009bd4;
+@brand-warning:         #f0ad4e;
+@brand-danger:          #d9534f;
+@brand-mid-gray:        #999999;
+
+// Brand Secondary
+@brand-inline-alert:    #f7941d; // special text, alert (non-error) message text, buttons
+@brand-inline-info:     #89c2ca; // informational setting.  best as background, too light for text color
+@brand-market-low:      #0e8893;
+@brand-market-high:     #9ae2fd;*/
+
 /* Framework colors */
 .color-swatches .gray-darker {
-  background-color: #222;
-}
-.color-swatches .gray-dark {
   background-color: #333;
 }
+.color-swatches .gray-dark {
+  background-color: #322924;
+}
 .color-swatches .gray {
-  background-color: #555;
+  background-color: #42362f;
 }
 .color-swatches .gray-light {
-  background-color: #999;
+  background-color: #a39d96;
 }
 .color-swatches .gray-lighter {
-  background-color: #eee;
+  background-color: #e6e6e6;
 }
 .color-swatches .brand-primary {
-  background-color: #428bca;
+  background-color: #ee6700;
+}
+.color-swatches .brand-secondary {
+  background-color: #09f;
+}
+.color-swatches .brand-mid-gray {
+  background-color: #999;
 }
 .color-swatches .brand-success {
-  background-color: #5cb85c;
+  background-color: #9eb541;
 }
 .color-swatches .brand-warning {
   background-color: #f0ad4e;
@@ -766,7 +792,19 @@ h1[id] {
   background-color: #d9534f;
 }
 .color-swatches .brand-info {
-  background-color: #5bc0de;
+  background-color: #009bd4;
+}
+.color-swatches .brand-inline-alert {
+  background-color: #f7941d;
+}
+.color-swatches .brand-inline-info {
+  background-color: #89c2ca;
+}
+.color-swatches .brand-market-low {
+  background-color: #0e8893;
+}
+.color-swatches .brand-market-high {
+  background-color: #9ae2fd;
 }
 
 /* Docs colors */
@@ -1231,6 +1269,7 @@ h1[id] {
   float: left;
   width: 25%;
   height: 115px;
+  overflow-x: hidden;
   padding: 10px;
   font-size: 10px;
   line-height: 1.4;
