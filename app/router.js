@@ -11,6 +11,7 @@ Router.map(function() {
   this.route("javascript", function() {});
   this.route("getting-started", function() {});
   this.route("dpl-components", function() {});
+  this.route("ui-ux");
 });
 
 export default Router;
