@@ -17,7 +17,7 @@ BuildArch: noarch
 Requires:  cm-logarchive
 Requires:  nodejs
 
-%define dpl_dir /var/www/dpl
+%define dpl_dir /var/www/html
 %description
 Ember-cli application for siteui.
 
