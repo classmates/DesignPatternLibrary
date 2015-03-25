@@ -3,6 +3,8 @@
 # compiled output
 /dist
 /tmp
+/target
+/.gradle
 
 # dependencies
 /node_modules
