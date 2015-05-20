@@ -1,7 +1,7 @@
 %define __os_install_post %{nil}
 AutoReqProv: no
 
-Name:       dpl
+Name:       ghdpl
 Version:    ${version}
 Release:    1
 Epoch:      1

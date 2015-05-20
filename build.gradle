@@ -21,7 +21,7 @@ buildscript {
 }
 
 ext {
-    artifactId = "dpl"
+    artifactId = "ghdpl"
     tarballName = "${artifactId}-${version}"
 }
 
